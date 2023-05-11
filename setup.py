@@ -1,15 +1,10 @@
 from setuptools import setup
 from setuptools import find_packages
 
-
-config = {
-    "name": "pastream",
-    "packages": find_packages(),
-    "entry_points": {
-        "console_scripts": [
-            "pastream=main:main"
-        ]
+setup(
+    name="pastream",
+    packages=find_packages(),
+    entry_points={
+        "gui_scripts": ["pastream=main:pastream_gui"]
     }
-}
-
-setup(**config)
+)
